@@ -9,6 +9,6 @@ clean:
 	-rm *.o
 	-rm libunsupseg.a
 
-libunsupseg.a: dtw.o
+libunsupseg.a: dtw.o embed.o
 	$(AR) rcs $@ $^
 

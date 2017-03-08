@@ -46,17 +46,4 @@ namespace dtw {
         return score[seg1.size() - 1][seg2.size() - 1];
     }
 
-    la::vector<double> embed(seg_t const& seg, std::vector<seg_t> const& basis)
-    {
-        la::vector<double> result;
-    
-        result.resize(basis.size());
-    
-        for (int i = 0; i < basis.size(); ++i) {
-            result(i) = dtw(seg, basis.at(i));
-        }
-    
-        return result;
-    }
-
 }
